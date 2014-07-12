@@ -2,8 +2,7 @@
 /*  Written by Chris Converse - http://codifydesign.com   */
 
 /* Swatch A Overrides */
-.ui-page.ui-body-a.ui-page-active { background: #EFEFEF url(../images/bg-mam18.png) no-repeat center center;background-attachment:fixed; -webkit-background-size: 100%; -moz-background-size: 100%;-o-background-size: 100%;background-size: 100%;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;}
-
+.ui-page.ui-body-a.ui-page-active { background: #EFEFEF url(../images/bg-mam-7-480x800.png) no-repeat center;}
 
 
 .ui-page.ui-body-a.ui-page-active .ui-header.ui-bar-a { display: none; }
@@ -11,13 +10,12 @@
 #home .ui-content { padding-top: 100px; padding-bottom: 5px; margin: 0px 15px 10px 15px; }
 
 #home .ui-listview { text-align: center;  }
-#home .ui-listview .ui-btn {
-	width: 100px;
-	display: inline-block;
-	border:2px;
-	margin: 10px 20px 10px 20px;
+#home .ui-listview .ui-btn { width: 100px; ;display: inline-block; border:2px; margin: 10px 20px 10px 20px;
 }
 #home .ui-listview .ui-btn .ui-li { border: none; }
+#home .ui-listview .ui-btn .ui-li a{ color:#000000; text-decoration:none;  text-align: center;} 
+#home .ui-listview .ui-btn .ui-li a span{ display:block; text-align:center; font-size:11px; line-height:15px;}
+#home .ui-listview .ui-btn .ui-li img{ display:inline-block;max-width:50%;}
 #home .ui-listview .ui-btn .ui-li .ui-icon { display: none; }
 #home .ui-listview .ui-btn .ui-li .ui-link-inherit { color: #000000; font-size: .8em; font-weight:Bold; padding: 110px 0px 10px 0px; text-align: center; }
 
@@ -25,10 +23,13 @@
 #home .ui-listview .ui-btn.btn_b { background: url(../images/maps1.png) no-repeat 0px 0px; }
 #home .ui-listview .ui-btn.btn_c { background: url(../images/asset_register1.png) no-repeat 0px 0px; }
 #home .ui-listview .ui-btn.btn_d { background: url(../images/asset_dispose1.png) no-repeat 0px 0px; }
-#home .ui-listview .ui-btn.btn_e { background: url(../images/settings1.png) no-repeat 0px 0px; }
+#home .ui-listview .ui-btn.btn_e { background: url(../images/report1.png) no-repeat 0px 0px; }
 #home .ui-listview .ui-btn.btn_f { background: url(../images/search1.png) no-repeat 0px 0px; }
 #home .ui-listview .ui-btn.btn_g { background: url(../images/support1.png) no-repeat 0px 0px; }
 #home .ui-listview .ui-btn.btn_h { background: url(../images/logout1.png) no-repeat 0px 0px; }
+
+
+
 
 /* Swatch C Overrides */
 .ui-page.ui-body-c.ui-page-active { background: #FFFFFF; }
@@ -52,7 +53,7 @@ body { background-color: #EFEFEF; }
 	-moz-box-shadow: 0px 4px 5px rgba(0,0,0,.20);
 	-webkit-box-shadow: 0px 4px 5px rgba(0,0,0,.20);
 	box-shadow: 0px 4px 5px rgba(0,0,0,.20);
-	background: #000 url(../images/content_banner.png) no-repeat right 0px;
+	background: #EFEFEF url(../images/content_banner.png) no-repeat center 0px;
 	padding: 5px 0px 5px 0px;
 }
 .ui-header h1.ui-title { font-size: 20px; text-align: left; margin: .6em 10px .8em 55px; }

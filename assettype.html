@@ -2,12 +2,24 @@
 	<!-- start of id=AssetType -->
 	<div data-role="page" id="assetTypeListPage" data-title="assetTypeListPage">
   <div data-role="header" data-position="fixed">
-    <h1>Step 3: Select Asset Type</h1>
+    <h1>Langkah 3: Pilihan Jenis Aset</h1>
    
     <a href="#" data-rel="back" data-icon="arrow-l" data-iconpos="notext">back</a> </div>  
        	<div data-role="content" data-iscroll>  	
    
-
+       	<!-- display selected asset class --> 
+       	<hr>
+					<table align="center" width="95%" border="0" cellspacing="1" cellpadding="2" data-theme="a">
+  					<tr>
+    					<td><b>Kumpulan Aset :</b></td>
+    					<td align="left"><div id="assetClassSelectedName"></div></td>
+  					</tr>
+  					<td><b>Kategori Aset :</b></td>
+    					<td align="left"><div id="assetCategorySelectedName"></div></td>
+  					</tr>
+					</table>
+  				<hr><br>
+       	<!-- display selected asset class -->
        	
        	<!-- display selected asset type --> 
 			<ul id="assetTypeList" data-role="listview" data-filter="true"></ul>

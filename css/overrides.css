@@ -2,12 +2,24 @@
 /*  Written by Chris Converse - http://codifydesign.com   */
 
 /* Swatch A Overrides */
-.ui-page.ui-body-a.ui-page-active { background: #EFEFEF url(../images/bg-mam-7-480x800.png) no-repeat center;}
+.ui-page.ui-body-a.ui-page-active { background: #EFEFEF url(../images/bg-mam-2-1920x1200.png) no-repeat center; background-size:100% 100%;}
+.logo{ text-align:center; margin:auto; padding:0px 0 10px 5px;font-size:10px;}
+.logo, .logo a{ color:#FFFFFF;}
+
+/* Menu style
+/*------------------------------------------*/
+.menu{ width:100%; padding:0px; margin:0px 0 50px 0;}
+.menu ul{ list-style:none; padding:0px; margin:0px; width:100%;}
+.menu ul li{ list-style:none; margin:1% 0 0 10%; padding:1.5% 0; width:35.5%;height:auto; float:left; display:block; text-align:center;}
+.menu ul li a{ color:#000000; text-decoration:none;  text-align: center;} 
+.menu ul li a span{ display:block; text-align:center; font-size:14px; line-height:25px;}
+.menu ul li img{ display:inline-block;max-width:100%;}
+
 
 
 .ui-page.ui-body-a.ui-page-active .ui-header.ui-bar-a { display: none; }
 
-#home .ui-content { padding-top: 100px; padding-bottom: 5px; margin: 0px 15px 10px 15px; }
+#home .ui-content { padding-top: 2px; padding-bottom: 5px; margin: 0px 15px 10px 15px; }
 
 #home .ui-listview { text-align: center;  }
 #home .ui-listview .ui-btn { width: 100px; ;display: inline-block; border:2px; margin: 10px 20px 10px 20px;
@@ -53,7 +65,7 @@ body { background-color: #EFEFEF; }
 	-moz-box-shadow: 0px 4px 5px rgba(0,0,0,.20);
 	-webkit-box-shadow: 0px 4px 5px rgba(0,0,0,.20);
 	box-shadow: 0px 4px 5px rgba(0,0,0,.20);
-	background: #EFEFEF url(../images/content_banner.png) no-repeat center 0px;
+	background: #EFEFEF url(../images/content_banner.png) no-repeat center 0px; background-size:100% 100%;
 	padding: 5px 0px 5px 0px;
 }
 .ui-header h1.ui-title { font-size: 20px; text-align: left; margin: .6em 10px .8em 55px; }

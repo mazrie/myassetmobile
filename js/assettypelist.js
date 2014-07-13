@@ -8,7 +8,7 @@ function displayAssetType(data) {
 	var assettype = data.items;
 	console.log(assettype);
 		$.each(assettype, function(index, aty) {
-			$('#assetTypeList').append('<li><a href="register.html?id=' + aty.aty_id + '">'+ aty.aty_name +
+			$('#assetTypeList').append('<li><a href="assetregister.html?id=' + aty.aty_id + '">'+ aty.aty_name +
 					'<span class="ui-li-count">' + aty.aty_count + '</span></li>');
 		});
 		$('#assetTypeList').listview('refresh');

@@ -5,7 +5,7 @@ $('#assetClassListPage').bind('pageinit', function(event) {
 });
 
 function getAssetClass() {
-	$.getJSON('services/getassetclass.php', function(data) {
+	$.getJSON('http://www.myassetmobile.com/assetclass.php', function(data) {
 		$('#assetClassList li').remove();
 		assetclass = data.items;
 		$.each(assetclass, function(index, acl) {

@@ -1,7 +1,7 @@
 
 $('#assetCategoryListPage').live('pageshow', function(event) {
 	var id = getUrlVars()["id"];
-	$.getJSON('services/getassetcategory.php?id='+id, displayAssetCategory);
+	$.getJSON('http://www.myassetmobile.com/services/getassetcategory.php?id='+id, displayAssetCategory);
 });
 
 function displayAssetCategory(data) {

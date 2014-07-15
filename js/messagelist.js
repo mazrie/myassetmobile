@@ -1,6 +1,6 @@
 var messages;
 
-$('#messageListPage').bind('pageinit', function(event) {
+$('#messageListPage').live('pageshow', function(event) {
 	getMessageList();
 });
 
@@ -16,3 +16,4 @@ function getMessageList() {
 		$('#messageList').listview('refresh');
 	});
 }
+

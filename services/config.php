@@ -1,8 +1,8 @@
 <?php
 	
-	$dbhost = 'localhost';
-	$dbuser = 'eirzamco_myassetmobile_21';
-	$dbpass = 'eirzamco_myasset';
-	$dbname = 'cipanzila1!';
+	$dbhost = '127.0.0.1';
+	$dbuser = 'eirzamco_myasset';
+	$dbpass = 'cipanzila1!';
+	$dbname = 'eirzamco_myassetmobile_21';
 
 ?>

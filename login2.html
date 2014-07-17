@@ -54,13 +54,8 @@
 	
 	<!-- start of id=loginValidate -->
 
-<style>
-.ui-page .ui-header {
-    background: #112233 !important;
-}
-a:link {color:#FF0000;}    /* unvisited link */
-a:visited {color:#00FF00;} /* visited link */
-</style>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
 	
 <div data-role="page" id="loginSubmit" data-title="loginSubmit" data-theme="a">
 	
@@ -68,36 +63,27 @@ a:visited {color:#00FF00;} /* visited link */
   </div>
   		<img class="logo" src="images/logo-mam-1.png" alt="" title="" width="220" height="85" />
   		
-  	<div data-role="content">
-  		<br><br>
-        <form style="background:#5CB8E6" id="checkUser" class="ui-body ui-body-a ui-corner-all" data-ajax="false">
-  	<fieldset>
-			<div align="center"><p><b>.:: Login Ke Sistem MyAssetMobile ::.</b></p></div><hr>
-
-			<div class="ui-grid-solo">
-				<div class="ui-block-a"><div data-role="fieldcontain"><input type="text" placeholder="Username.." value="" name="username" id="username"/></div>                                  
-			</div>	   
+  	<div class="container">
+	<section id="content">
+		<form action="">
+			<h1>Login Form</h1>
+			<div>
+				<input type="text" placeholder="Username" required="" id="username" />
 			</div>
-			<div class="ui-grid-solo">
-				<div class="ui-block-a"><div data-role="fieldcontain"><input type="password" placeholder="Password.."value="" name="password" id="password"/></div></div>	   
+			<div>
+				<input type="password" placeholder="Password" required="" id="password" />
 			</div>
-			<div class="ui-grid-a">
-      <div class="ui-block-a" align="left">
-      	<a href="index.html">Lupa kata laluan?</a>
-      	</div>
-			<div class="ui-block-b" style="text-align: right;"><input type="button" data-theme="b" class="primary" name="loginSubmit" id="loginSubmit" value="Login"></div>
-    </div>
-		</fieldset>
-        </form>    
-        
-
-
-        
-		<div class="ui-grid-a">
-			<div class="ui-block-a" align="left"></div>
-			<div class="ui-block-b" align="right"><a href="index.html">Hubungi Kami</a></div>
-		</div><!-- /grid-b -->                          
-    </div>
+			<div>
+				<input type="submit" value="Log in" />
+				<a href="#">Lost your password?</a>
+				<a href="#">Register</a>
+			</div>
+		</form><!-- form -->
+		<div class="button">
+			<a href="#">Download source file</a>
+		</div><!-- button -->
+	</section><!-- content -->
+</div><!-- container -->
 
 
 

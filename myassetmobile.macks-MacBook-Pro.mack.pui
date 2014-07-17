@@ -7,16 +7,9 @@
   <Folder Name="/Applications/MAMP/htdocs/myassetmobile/">
     <Expand>1</Expand>
   </Folder>
-  <Open_Files>
-    <File>/Applications/MAMP/htdocs/myassetmobile/index.html</File>
-    <File>/Applications/MAMP/htdocs/myassetmobile/json.js</File>
-    <File>/Applications/MAMP/htdocs/myassetmobile/js/loginvalidate.js</File>
-    <File>/Applications/MAMP/htdocs/myassetmobile/json.html</File>
-    <File>/Applications/MAMP/htdocs/myassetmobile/js/messagedetails.js</File>
-  </Open_Files>
   <Project_Information>
-    <Project_Start>1700000020000000100000000F000000060000007200000002000000C300000000000000807000005F39A304C2</Project_Start>
-    <Working_Time>1750</Working_Time>
+    <Project_Start>0E000000240000000800000011000000060000007200000004000000C500000000000000807000005F8F8A02F6</Project_Start>
+    <Working_Time>23051575432</Working_Time>
   </Project_Information>
   <Active_Settings>
     <Active_File_Display_Mode>-1</Active_File_Display_Mode>

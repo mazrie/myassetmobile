@@ -21,6 +21,15 @@
 /* Menu style
 /*------------------------------------------*/
 
+/* button */
+.primary.ui-state-default, .primary.ui-widget-content .primary.ui-state-default, .primary.ui-widget-header .primary.ui-state-default { border: 1px solid #407998; background: #004c75 url(css/jquery_ui/images/ui-bg_glass_40_004c75_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #ffffff; }
+.primary.ui-state-default a, .primary.ui-state-default a:link, .primary.ui-state-default a:visited { color: #ffffff; text-decoration: none; }
+.primary.ui-state-hover, .primary.ui-widget-content .primary.ui-state-hover, .primary.ui-widget-header .primary.ui-state-hover, .primary.ui-state-focus, .primary.ui-widget-content .primary.ui-state-focus, .primary.ui-widget-header .primary.ui-state-focus { border: 1px solid #407998; background: #407998 url(css/jquery_ui/images/ui-bg_glass_40_407998_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #ffffff; }
+.primary.ui-state-hover a, .primary.ui-state-hover a:hover { color: #ffffff; text-decoration: none; }
+.primary.ui-state-active, .primary.ui-widget-content .primary.ui-state-active, .primary.ui-widget-header .primary.ui-state-active { border: 1px solid #004c75; background: #407998 url(css/jquery_ui/images/ui-bg_glass_40_407998_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #ffffff; }
+.primary.ui-state-active a, .primary.ui-state-active a:link, .primary.ui-state-active a:visited { color: #ffffff; text-decoration: none; }
+.primary.ui-widget :active { outline: none; }
+
 
 
 .ui-page.ui-body-a.ui-page-active .ui-header.ui-bar-a { display: none; }

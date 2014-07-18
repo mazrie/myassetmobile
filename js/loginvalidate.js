@@ -6,7 +6,7 @@
 
             console.log($('#checkUser').serialize());
             $.ajax({
-                url: 'services/getloginvalidate.php',
+                url: 'services/getloginvalidate_ori.php',
                 data: $('#checkUser').serialize(),
                 type: 'POST',
                 beforeSend: function () {
@@ -15,26 +15,25 @@
                 },
                 complete: function () {
                     // This callback function will trigger on data sent/received complete
-                    $.mobile.hidePageLoadingMsg(); // This will hide ajax spinner											
-										},
-								success: function (result) {
-										var verified = jQuery.parseJSON(result);
-                if (verified.login == true) {               
-                       	$.mobile.changePage("index.html");
-												//	alert("sini la " + verified.login);           
+                    $.mobile.hidePageLoadingMsg(); // This will hide ajax spinner		
+									},
+  						success: function (result) {
+                    if (result.login == true) {
+												alert("betul " + result.username);
+                        //$.mobile.changePage("home.php");
                     } else {
-                        alert("wrong credentials " + verified.login);
-                }
-            },
-                error: function (request, error) {
-                    // This callback function will trigger on unsuccessful action                
-                    alert("An error occurred: " + status + "nError: " + error);
-                }
-            });
-        } else {
-            alert('Please fill all necessary fields mutapuka');
-        }
-        event.preventDefault(); // cancel original event to prevent form submitting
-    });
-});
+                        alert("wrong credentials " + result.username);
+                    }
 
+									},
+            error: function (request, error) {
+                // This callback function will trigger on unsuccessful action                
+                alert("An error occurred: " + status + "nError: " + error);
+            }
+        });
+    } else {
+        alert('Please fill all necessary fields');
+    }
+    return false; // cancel original event to prevent form submitting
+});
+});

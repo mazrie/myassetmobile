@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="css/jquery.mobile.theme-1.3.2.css" type="text/css" />
 	<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" type="text/css" />      
 	<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" />      
-	<link rel="stylesheet" href="css/jquery.mobile.simpledialog.css" type="text/css" />      
 	</head>
 	
 	<!-- END OF head declaration -->
@@ -29,7 +28,7 @@
 	<script src="js/assetclassselected.js"></script>
 	<script src="js/assetcategoryselected.js"></script>
 	<script src="js/assettypelist.js"></script>
-	<script src="js/reportlist.js"></script>
+	<script src="js/loginvalidate.js"></script>
 
 	<!-- iscrollview  -->
 	<script src="js/iscroll.js" type="text/javascript"></script>
@@ -49,58 +48,36 @@
 	<!-- theme  -->
 	<link rel="stylesheet" href="css/myassetmobile_v2.1.css" />
 	<link rel="stylesheet" href="css/overrides.css" />
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
 	
 	<!-- END OF script declarations -->  
 	
 	<!-- start of id=loginValidate -->
 
-<style>
-.ui-page .ui-header {
-    background: #112233 !important;
-}
-a:link {color:#FF0000;}    /* unvisited link */
-a:visited {color:#00FF00;} /* visited link */
-</style>
 	
-<div data-role="page" id="loginSubmit" data-title="loginSubmit" data-theme="a">
-	
+<div data-role="page" id="loginValidate" data-title="loginValidate" data-theme="a">
 	  <div data-role="header" data-position="fixed">
   </div>
-  		<img class="logo" src="images/logo-mam-1.png" alt="" title="" width="220" height="85" />
-  		
-  	<div data-role="content">
-  		<br><br>
-        <form style="background:#5CB8E6" id="checkUser" class="ui-body ui-body-a ui-corner-all" data-ajax="false">
-  	<fieldset>
-			<div align="center"><p><b>.:: Login Ke Sistem MyAssetMobile ::.</b></p></div><hr>
-
-			<div class="ui-grid-solo">
-				<div class="ui-block-a"><div data-role="fieldcontain"><input type="text" placeholder="Username.." value="" name="username" id="username"/></div>                                  
-			</div>	   
+<div class="container" data-role="content" >
+	<section id="content">
+		<form id="checkUser" data-ajax="false">
+	  		<img class="logo" src="images/logo-mam-1.png" alt="" title="" width="220" height="85" />
+			<div>
+					<input type="text" placeholder="Username" required="" id="username" />
+				</div>
+			<div>
+				<input type="password" placeholder="Kata laluan" required="" id="password" />
 			</div>
-			<div class="ui-grid-solo">
-				<div class="ui-block-a"><div data-role="fieldcontain"><input type="password" placeholder="Password.."value="" name="password" id="password"/></div></div>	   
+			<div><a href="#">Lupa kata laluan?</a> <input type="submit" id="loginSubmit" value="Log in" />
 			</div>
-			<div class="ui-grid-a">
-      <div class="ui-block-a" align="left">
-      	<a href="index.html">Lupa kata laluan?</a>
-      	</div>
-			<div class="ui-block-b" style="text-align: right;"><input type="button" data-theme="b" class="primary" name="loginSubmit" id="loginSubmit" value="Login"></div>
-    </div>
-		</fieldset>
-        </form>    
-        
 
-
-        
-		<div class="ui-grid-a">
-			<div class="ui-block-a" align="left"></div>
-			<div class="ui-block-b" align="right"><a href="index.html">Hubungi Kami</a></div>
-		</div><!-- /grid-b -->                          
-    </div>
-
-
-
+		</form><!-- form -->
+		<div class="button">
+			<a href="#">Bantuan Sistem</a>
+		</div><!-- button -->
+	</section><!-- content -->
+</div><!-- container -->
+      
 </div>
 
 <!-- end of id=loginValidate -->

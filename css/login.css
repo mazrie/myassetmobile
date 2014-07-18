@@ -17,7 +17,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	background: transparent;
 }
 body {
-	background: #DCDDDF url(http://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
+	background: #DCDDDF url(../images/7AF2Qzt.png);
 	color: #000;
 	font: 14px Arial;
 	margin: 0 auto;
@@ -47,7 +47,7 @@ form:after {
 	clear: both;
 	visibility: hidden;
 }
-.container { margin: 25px auto; position: relative; width: 900px; }
+.container { margin: 25px auto; position: center; width: 300px; }
 #content {
 	background: #f9f9f9;
 	background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(249,249,249,1) 100%);
@@ -62,12 +62,12 @@ form:after {
 	-o-box-shadow: 0 1px 0 #fff inset;
 	box-shadow: 0 1px 0 #fff inset;
 	border: 1px solid #c4c6ca;
-	margin: 0 auto;
-	padding: 25px 0 0;
+	margin: 55px auto;
+	padding: 1px 0 0;
 	position: relative;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
-	width: 400px;
+	width: 300px;
 }
 #content h1 {
 	color: #7E7E7E;
@@ -137,7 +137,7 @@ form:after {
 	top: 0;
 	z-index: -2;
 }
-#content form { margin: 0 20px; position: relative }
+#content form { margin: 10px 20px; position: relative }
 #content form input[type="text"],
 #content form input[type="password"] {
 	-webkit-border-radius: 3px;
@@ -155,13 +155,13 @@ form:after {
 	-ms-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
-	background: #eae7e7 url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) no-repeat;
+	background: #eae7e7 url(../images/8bcLQqF.png) no-repeat;
 	border: 1px solid #c8c8c8;
 	color: #777;
 	font: 13px Helvetica, Arial, sans-serif;
-	margin: 0 0 10px;
+	margin: 5 0 5px;
 	padding: 15px 10px 15px 40px;
-	width: 80%;
+	width: 100%;
 }
 #content form input[type="text"]:focus,
 #content form input[type="password"]:focus {
@@ -243,7 +243,7 @@ form:after {
 	padding: 15px 0;
 }
 .button a {
-	background: url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) 0 -112px no-repeat;
+	background: url(../images/8bcLQqF.png) 0 -112px no-repeat;
 	color: #7E7E7E;
 	font-size: 17px;
 	padding: 2px 0 2px 40px;
@@ -258,3 +258,5 @@ form:after {
 	background-position: 0 -135px;
 	color: #00aeef;
 }
+
+::-webkit-validation-bubble-message { display: none; }

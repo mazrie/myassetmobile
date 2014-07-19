@@ -8,7 +8,7 @@ function displayMessage(data) {
 	console.log(message);
 	$('#messageSubject').text(message.um_subject);
 	$('#messageContent').text(message.um_message);
-	$('#actionList').listview('refresh');
+	$('#msgDetailsPage').listview('refresh');
 	
 }
 

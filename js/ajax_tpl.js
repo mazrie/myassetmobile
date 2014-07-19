@@ -1,4 +1,4 @@
-	$(document).on('pageinit', '#loginValidate', function (e, data) {
+$(document).on('pageinit', '#loginValidate', function () {
     $(document).on('click', '#loginSubmit', function () { // catch the form's submit event
         if ($('#username').val().length > 0 && $('#password').val().length > 0) {
             // Send data to server through the ajax call
@@ -34,6 +34,6 @@
         } else {
             alert('Please fill all necessary fields');
         }
-    return false; // cancel original event to prevent form submitting
-});
+        return false; // cancel original event to prevent form submitting
+    });
 });

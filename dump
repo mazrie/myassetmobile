@@ -1,0 +1,27 @@
+    <div data-role="content" data-theme="a">
+        <div class="element">
+            <br><h3 align="center">Kumpulan Aset: Harta Modal</h3>
+        </div><br>
+        <div class="element">
+            <form action="forms-sample-response.php" method="get" data-ajax="false" class="ui-body ui-body-b ui-corner-all">
+                <fieldset>
+                <div class="fieldcontain">
+            <select name="selectAssetGroup" id="selectAssetGroup">
+                <option Selected>Kategori</option>
+                <option value="option1">Inventori</option>
+                <option value="option2">Harta Modal</option>
+            </select>
+            <select name="selectAssetGroup" id="selectAssetGroup">
+                <option Selected>Sub-Kategori</option>
+                <option value="option1">Inventori</option>
+                <option value="option2">Harta Modal</option>
+            </select>
+            <select name="selectAssetGroup" id="selectAssetGroup">
+                <option Selected>Jenis</option>
+                <option value="option1">Inventori</option>
+                <option value="option2">Harta Modal</option>
+            </select>
+               <button class="ui-button-icon-only">Button</button>
+            </form>
+        </div>
+    </div>

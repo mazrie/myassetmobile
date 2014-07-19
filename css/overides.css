@@ -1,16 +1,30 @@
 /*  CSS Document - jQuery Mobile Overrides                */
 /*  Written by Chris Converse - http://codifydesign.com   */
 
+
+.element {
+    /* set border styling */
+    border-color: #a1cbe2;
+    border-style: solid;
+    border-width: 5px;
+
+    /* set border roundness */
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
 /* Swatch A Overrides */
-.ui-page.ui-body-a.ui-page-active { background: #EFEFEF url(../images/bg-mam-2-1920x1200.png) no-repeat center; background-size:100% 100%;}
+.bg { background: #cccccc url(../images/bg-mam-2-1920x1200.png) no-repeat center; background-size:100% 100%;}
+.ui-page.ui-body-a.ui-page-active { background: #cccccc url(../images/bg-mam-2-1920x1200.png) no-repeat center; background-size:100% 100%;}
 .logo{ text-align:center; margin:auto; padding:0px 0 10px 5px;font-size:20px;}
 .logo, .logo a{ color:#FFFFFF;}
 
 
-.menu{ width:100%; padding:10px;margin:0px 0 50px 0;}
+.menu{ width:100%; padding:10px;margin:0px 0 50px 15px;}
 .menu ul{ list-style:none; padding:0px; margin:0px; width:100%;}
 .menu ul li{ list-style:none; margin:1% 0 0% 4%; padding:3.5% 0; width:39.5%;height:auto; float:left; display:block; text-align:center; solid;-webkit-border-radius: 200px;-moz-border-radius: 200px;border-radius: 200px;}
-.menu ul li a{ color:#000000; text-decoration:none;  text-align: center;} 
+.menu ul li a{ color:#000000; text-decoration:none;  text-align: center;}
 .menu ul li a span{ display:block; text-align:center; font-size:11px; line-height:15px;}
 .menu ul li img{ display:inline-block;max-width:70%;}
 
@@ -30,9 +44,6 @@
 .primary.ui-state-active a, .primary.ui-state-active a:link, .primary.ui-state-active a:visited { color: #ffffff; text-decoration: none; }
 .primary.ui-widget :active { outline: none; }
 
-
-
-.ui-page.ui-body-a.ui-page-active .ui-header.ui-bar-a { display: none; }
 
 #home .ui-content { padding-top: 2px; padding-bottom: 5px; margin: 0px 15px 10px 15px; }
 

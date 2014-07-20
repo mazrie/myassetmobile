@@ -2,6 +2,14 @@
 /*  Written by Chris Converse - http://codifydesign.com   */
 
 
+.hr {
+    background-color: #FFFFFF;
+    border: 1px dotted #004c75;
+    height: 0px;
+    margin: 8px 0;
+    }
+
+
 .element {
     /* set border styling */
     border-color: #a1cbe2;
@@ -86,7 +94,8 @@
 /* Global Overrides */
 body { background-color: #EFEFEF; }
 .ui-header {
-	border: none;
+    height:40px;
+    border: none;
 	border-bottom: 1px solid #fff;
 	-moz-box-shadow: 0px 4px 5px rgba(0,0,0,.20);
 	-webkit-box-shadow: 0px 4px 5px rgba(0,0,0,.20);
@@ -94,9 +103,8 @@ body { background-color: #EFEFEF; }
 	background: #EFEFEF url(../images/content_banner.png) no-repeat center 0px; background-size:100% 100%;
 	padding: 5px 0px 5px 0px;
 }
-.ui-header h1.ui-title { font-size: 20px; text-align: left; margin: .6em 10px .8em 55px; }
+.ui-header h1.ui-title { font-size: 18px; text-align: left; margin: .0em 10px .8em 20px; }
 .ui-header .ui-btn-left { top: 1em; }
-
 .ui-page.ui-body-c.ui-overlay-a.ui-dialog.ui-page-active .ui-header h1.ui-title { margin: .8em 10px .8em 40px; }
 
 .ui-footer.ui-bar-a {

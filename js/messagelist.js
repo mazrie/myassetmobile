@@ -16,4 +16,3 @@ function getMessageList() {
 		$('#messageList').listview('refresh');
 	});
 }
-

@@ -1,0 +1,263 @@
+<!-- START OF head declarations -->
+<head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+
+    <!-- theme  -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css">
+    <link rel="stylesheet" href="css/myassetmobile_v3.min.css" />
+    <link rel="stylesheet" href="css/overides.css" />
+
+    <!-- services -->
+    <script src="js/employeelist.js"></script>
+
+    <!-- iscrollview  -->
+    <script src="js/iscroll.js" type="text/javascript"></script>
+    <script src="js/jquery.mobile.iscrollview.js" type="text/javascript"></script>
+</head>
+<!-- END OF HEAD declarations -->
+
+
+<!-- start of id=inbox -->
+
+<div data-role="page" id="regHartaModalList" data-title="regHartaModalList" data-theme="a">
+
+    <div data-role="header" data-position="fixed">
+        <h1>Harta Modal</h1>
+    </div>
+    <div data-role="content" data-theme="a">
+
+
+        <img src="images/final-reg-hartamodal-step3.png" width="300" height="50" about="center">
+        <div class="hr"></div>
+
+        <h1>Pendaftaran Aset</h1>
+
+        <a href="#" data-rel="back" data-icon="arrow-l" data-iconpos="notext">back</a> </div>
+    <div data-role="content" data-iscroll>
+
+
+
+        <script>
+            $(function() {
+                $( "#accordion" ).accordion({
+                    heightStyle: "content"
+                });
+            });
+        </script>
+
+        <div id="accordion">
+            <h3>Klasifikasi</h3>
+            <div>
+                <div align="left">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 50%">Kategori :</div>
+                        <div class="ui-block-b" style="width: 50%"><div id="assetClassSelectedName"></div></div>
+                        <div class="ui-block-a" style="width: 50%">Sub-Kategori :</div>
+                        <div class="ui-block-b" style="width: 50%"><div id="assetClassSelectedName"></div></div>
+                        <div class="ui-block-a" style="width: 50%">Jenis :</div>
+                        <div class="ui-block-b" style="width: 50%"><div id="assetClassSelectedName"></div></div>
+                        <div class="ui-block-a" style="width: 50%">Kumpulan Aset :</div>
+                        <div class="ui-block-b" style="width: 50%">
+                            <select name="selectAssetGroup" id="selectAssetGroup">
+                                <option Selected>Kumpulan Aset</option>
+                                <option value="option1">Inventori</option>
+                                <option value="option2">Harta Modal</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- display selected asset Classification -->
+
+
+            </div>
+            <h3>Maklumat</h3>
+            <div>
+
+                <!-- display selected asset Detail -->
+
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a"><b>Maklumat Aset:</b><hr><br></div>
+                </div>
+
+                <!-- Kod Nasional -->
+                <div align="left">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 50%><label for="txtQuantity">Kod Nasional :</label></div>
+                    <div class="ui-block-b" style="width: 50%>
+						<div data-role="fieldcontain"><input type="text" name="txtQuantity" id="txtQuantity" value=""  /></div>
+            </div>
+        </div>
+        <!-- Kod Nasional -->
+
+        <!-- Kuantiti -->
+        <div align="left">
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width: 50%><label for="txtQuantity">Kuantiti :</label></div>
+            <div class="ui-block-b" style="width: 50%>
+						<div data-role="fieldcontain"><input type="text" name="txtQuantity" id="txtQuantity" value="" size="5"  maxlength="5" /></div>
+    </div>
+</div>
+<!-- Kuantiti -->
+
+<!-- Unit Pengukuran -->
+<div align="left">
+    <div class="ui-grid-a">
+        <div class="ui-block-a" style="width: 50%><label for="txtQuantity">Unit Pengukuran :</label></div>
+    <div class="ui-block-b" style="width: 50%>
+						<div data-role="fieldcontain">
+    <select name="selectUnit" id="selectUnit">
+        <option Selected>Unit Pengukuran</option>
+        <option value="Buah">Buah</option>
+        <option value="Set">Set</option>
+        <option value="Bilah">Bilah</option>
+        <option value="Keping">Keping</option>
+        <option value="Gulung">Gulung</option>
+    </select>
+</div>
+</div>
+</div>
+<!-- Unit Pengukuran -->
+
+<!-- Tempoh Jaminan -->
+<div align="left">
+    <div class="ui-grid-a">
+        <div class="ui-block-a" style="width: 50%><label for="txtQuantity">Tempoh Jaminan :</label></div>
+    <div class="ui-block-b" style="width: 50%>
+						<div data-role="fieldcontain">
+    <select name="selectWarrantyPeriod" id="selectWarrantyPeriod">
+        <option Selected>Tempoh Jaminan</option>
+        <option value="1">1 Tahun</option>
+        <option value="2">2 Tahun</option>
+        <option value="3">3 Tahun</option>
+        <option value="4">4 Tahun</option>
+        <option value="5">5 Tahun</option>
+    </select>
+</div>
+</div>
+</div>
+<!-- Tempoh Jaminan -->
+
+<!-- Harga Perolehan Asal -->
+<div align="left">
+    <div class="ui-grid-a">
+        <div class="ui-block-a" style="width: 50%><label for="txtQuantity">Harga Perolehan Asal (RM) :</label></div>
+    <div class="ui-block-b" style="width: 50%>
+						<div data-role="fieldcontain"><input type="text" name="txtQuantity" id="txtQuantity" value=""  /></div>
+</div>
+</div>
+<!-- Harga Perolehan Asal -->
+
+<!-- Tarikh Diterima -->
+<div align="left">
+    <div class="ui-grid-a">
+        <div class="ui-block-a" style="width: 50%><label for="txtQuantity">Tarikh Diterima :</label></div>
+    <div class="ui-block-b" style="width: 50%>
+						<div data-role="fieldcontain">
+    <script>$(function() { $( "#AcceptDate" ).datepicker(); });</script>
+    <input type="text" id="AcceptDate" value="Tarikh Diterima..">
+</div>
+</div>
+</div>
+<!-- Tarikh Diterima -->
+
+<!-- No. Pesanan Rasmi -->
+<div align="left">
+    <div class="ui-grid-a">
+        <div class="ui-block-a" style="width: 50%><label for="txtQuantity">No. Pesanan Rasmi :</label></div>
+    <div class="ui-block-b" style="width: 50%>
+						<div data-role="fieldcontain"><input type="text" name="txtQuantity" id="txtQuantity" value=""  /></div>
+</div>
+</div>
+<!--  No. Pesanan Rasmi  -->
+
+<!-- Tarikh No. Pesanan Rasmi -->
+<div align="left">
+    <div class="ui-grid-a">
+        <div class="ui-block-a" style="width: 50%><label for="txtQuantity">Tarikh No. Pesanan Rasmi :</div>
+    <div class="ui-block-b" style="width: 50%>
+								<div data-role="fieldcontain">
+    <script>$(function() { $( "#PoDate" ).datepicker(); });</script>
+    <input type="text" id="PoDate" value="Tarikh No. Pesanan Rasmi..">
+</div>
+</div>
+</div>
+
+<!-- Tarikh No. Pesanan Rasmi -->
+</div>
+
+<h3>Kelulusan Pegawai</h3>
+<div>
+    <p>
+        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+        ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+        lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+    </ul>
+</div>
+<h3>Multimedia</h3>
+<div>
+    <p>
+        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+        mauris vel est.
+    </p>
+    <p>
+        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos.
+    </p>
+</div>
+
+<h3>Lokasi</h3>
+<div>
+    <p>
+        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+        mauris vel est.
+    </p>
+    <p>
+        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos.
+    </p>
+</div>
+
+<h3>Daftar</h3>
+<div>
+    <p>
+        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+        mauris vel est.
+    </p>
+    <p>
+        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos.
+    </p>
+</div>
+</div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" data-role="button" data-icon="arrow-l" data-theme="b" data-rel="back">Back </a>
+            <a href="index.html" rel="external" data-role="button" data-icon="home" data-theme="b"> Menu </a>
+            <a href="logout.html"  rel="external" data-role="button" data-icon="grid" data-theme="b"> Logout</a>
+        </div>
+    </div>
+
+        </div>
+
+        <!-- end of id=inbox -->

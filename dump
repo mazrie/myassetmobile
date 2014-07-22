@@ -25,3 +25,16 @@
             </form>
         </div>
     </div>
+
+
+
+                            <select name="selectAssetGroup" id="selectAssetGroup">
+                                <option Selected>Sub-Kategori</option>
+                                <option value="option1">Inventori</option>
+                                <option value="option2">Harta Modal</option>
+                            </select>
+                            <select name="selectAssetGroup" id="selectAssetGroup">
+                                <option Selected>Jenis</option>
+                                <option value="option1">Inventori</option>
+                                <option value="option2">Harta Modal</option>
+                            </select>

@@ -1,7 +1,7 @@
 <!-- START OF head declarations -->
 <head>
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
-    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.3.min.js"></script>
 
     <!-- theme  -->
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/overides.css" />
 
     <!-- services -->
+    <script src="js/employeelist.js"></script>
 
     <!-- iscrollview  -->
     <script src="js/iscroll.js" type="text/javascript"></script>
@@ -17,52 +18,46 @@
 </head>
 <!-- END OF HEAD declarations -->
 
-<script type="text/javascript">
-
-
-        $(document).ready(function()
-    {
-        $.getJSON("services/gethartamodal.php",function(data){
-            var select = $('#selectAssetCategory');
-            if (select.prop) {
-                var options = select.prop('options');
-            }
-            else {
-                var options = select.attr('options');
-            }
-            $('option', select).remove();
-            $.each(data.items, function(key, value){
-                options[options.length] = new Option(value['acl_name'], value['acl_id']);
-            });
-        });
-    });
-</script>
-
 
 <!-- start of id=inbox -->
 
 <div data-role="page" id="regHartaModalList" data-title="regHartaModalList" data-theme="a">
 
     <div data-role="header" data-position="fixed">
-        <h1>Pendaftaran (KEW.PA-2)</h1>
+        <h1>Harta Modal</h1>
     </div>
     <div data-role="content" data-theme="a">
 
 
-            <img src="images/final-reg-hartamodal-step2.png" width="300" height="50" about="center">
+            <img src="images/reg-hartamodal-progress-3.png" width="300" height="50" about="center">
             <div class="hr"></div>
 
+
+
+
         <div class="element">
-            <br><h3 align="center">Kumpulan Aset: Harta Modal</h3>
+            <br><h3 align="center">Kumpulan Asest: Harta Modal</h3>
         </div><br>
 
         <div class="element">
-            <form action="services/gethartamodal.php" method="get" data-ajax="false" class="ui-body ui-body-a ui-corner-all">
+            <form action="forms-sample-response.php" method="get" data-ajax="false" class="ui-body ui-body-a ui-corner-all">
                 <fieldset data-theme="a">
                     <div class="fieldcontain" data-theme="a">
-
-                        <select name="selectAssetCategory" id="selectAssetCategory"></select>
-
+                        <select name="selectAssetCategory" id="selectAssetCategory" data-theme="a">
+                            <option Selected>Kategori</option>
+                            <option value="option1">Inventori</option>
+                            <option value="option2">Harta Modal</option>
+                        </select>
+                        <select name="selectAssetGroup" id="selectAssetGroup">
+                            <option Selected>Sub-Kategori</option>
+                            <option value="option1">Inventori</option>
+                            <option value="option2">Harta Modal</option>
+                        </select>
+                        <select name="selectAssetGroup" id="selectAssetGroup">
+                            <option Selected>Jenis</option>
+                            <option value="option1">Inventori</option>
+                            <option value="option2">Harta Modal</option>
+                        </select>
                         <a href="reghartamodal2.html" class="ui-button" data-role="button" data-theme="b" data-icon="arrow-r">Seterusnya..</a>
                     </div>
                 </fieldset>

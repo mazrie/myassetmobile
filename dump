@@ -38,3 +38,35 @@
                                 <option value="option1">Inventori</option>
                                 <option value="option2">Harta Modal</option>
                             </select>
+
+
+<script type="text/javascript">
+
+
+        $(document).ready(function()
+    {
+        $.getJSON("services/gethartamodal.php",function(data){
+            var select = $('#selectAssetCategory');
+            if (select.prop) {
+                var options = select.prop('options');
+            }
+            else {
+                var options = select.attr('options');
+            }
+            $('option', select).remove();
+            $.each(data.items, function(key, value){
+                options[options.length] = new Option(value['acl_name'], value['acl_id']);
+            });
+        });
+    });
+</script>
+
+
+      <script>
+         if (jQuery().chained) {
+              alert('jQuery is loaded!');
+         }
+          else{
+             alert('jQuery is not loaded!');
+         }
+      </script>

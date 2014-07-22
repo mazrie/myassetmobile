@@ -17,31 +17,44 @@
 </head>
 <!-- END OF HEAD declarations -->
 
-<script type="text/javascript">
+
+    <script type="text/javascript" charset="utf-8">
+
+        //just a simulation- this is my server
+        var options = [
+            '<option value="1">LAPTOP</option><option value="2">DESKTOP</option><option value="8">NETWORKING</option>',
+            '<option value="7">MOBILE PHONE</option>',
+            '<option value="6">LAND</option><option value="9">HOUSE PLOT</option>',
+            '',
+            '<option value="5">DIAMONDS</option>']
+
+        //DONT USE DOM READY!! Use pageinit of #first
+        $(document).on("pageinit", "#first", function () {
+            /* //do this only if your first select is dynamic
+             $("#cat").selectmenu(); // Initializes
+             $("#cat").selectmenu('refresh', true); */
+            $("#cat").on("change", function () {
+            //    alert("change");
+                //$("#subcat").load("http://fortunebitsolutions.com/olx/dataadmin/getsub.php?cat=" + $("#cat").val());<--This wont work.ajax doesnt allow cross domain requests
+
+                //get a response from this url from your server, and make an ajax request to your server to get it from there.
+                //assuming this is the response from the server.
+                var $options = options[parseInt(this.value) - 1]
 
 
-        $(document).ready(function()
-    {
-        $.getJSON("services/gethartamodal.php",function(data){
-            var select = $('#selectAssetCategory');
-            if (select.prop) {
-                var options = select.prop('options');
-            }
-            else {
-                var options = select.attr('options');
-            }
-            $('option', select).remove();
-            $.each(data.items, function(key, value){
-                options[options.length] = new Option(value['acl_name'], value['acl_id']);
+                $("#subcat").html($options).selectmenu().selectmenu('refresh', true);
             });
         });
-    });
-</script>
+
+
+
+    </script>
+
 
 
 <!-- start of id=inbox -->
 
-<div data-role="page" id="regHartaModalList" data-title="regHartaModalList" data-theme="a">
+<div data-role="page" id="first" data-title="regHartaModalList" data-theme="a">
 
     <div data-role="header" data-position="fixed">
         <h1>Pendaftaran (KEW.PA-2)</h1>
@@ -56,18 +69,24 @@
             <br><h3 align="center">Kumpulan Aset: Harta Modal</h3>
         </div><br>
 
-        <div class="element">
-            <form action="services/gethartamodal.php" method="get" data-ajax="false" class="ui-body ui-body-a ui-corner-all">
-                <fieldset data-theme="a">
-                    <div class="fieldcontain" data-theme="a">
+        <div data-role="content">
 
-                        <select name="selectAssetCategory" id="selectAssetCategory"></select>
-
-                        <a href="reghartamodal2.html" class="ui-button" data-role="button" data-theme="b" data-icon="arrow-r">Seterusnya..</a>
+                <div data-role="content">
+                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                        <label for="cat" class="select">Category:</label>
+                        <select name="cat" id="cat" data-mini="true">
+                            <option value="1">COMPUTER</option>
+                            <option value="2">MOBILE</option>
+                            <option value="3">LAND</option>
+                            <option value="5">JEWELLERY</option>
+                        </select>
                     </div>
-                </fieldset>
-            </form>
-        </div>
+                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                        <label for="subcat" class="select">Sub Category:</label>
+                        <select name="subcat" id="subcat" data-mini="true"></select>
+                    </div>
+                </div>
+
     </div>
 
     <div data-role="footer" data-position="fixed" data-theme="a">

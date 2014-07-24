@@ -1,7 +1,7 @@
 <!-- START OF head declarations -->
 <head>
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
-    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.mobile-1.4.3.min.js"></script>
 
     <!-- theme  -->
@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="css/overides.css" />
 
     <!-- services -->
+    <script src="js/reghartamodal.js"></script>
+
+    <!-- jquery chained -->
+    <script src="js/jquery.chained.js?v=0.9.10" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.chained.remote.js?v=0.9.10" type="text/javascript" charset="utf-8"></script>
 
     <!-- iscrollview  -->
     <script src="js/iscroll.js" type="text/javascript"></script>
@@ -17,51 +22,17 @@
 </head>
 <!-- END OF HEAD declarations -->
 
-
-    <script type="text/javascript" charset="utf-8">
-
-        //just a simulation- this is my server
-        var options = [
-            '<option value="1">LAPTOP</option><option value="2">DESKTOP</option><option value="8">NETWORKING</option>',
-            '<option value="7">MOBILE PHONE</option>',
-            '<option value="6">LAND</option><option value="9">HOUSE PLOT</option>',
-            '',
-            '<option value="5">DIAMONDS</option>']
-
-        //DONT USE DOM READY!! Use pageinit of #first
-        $(document).on("pageinit", "#first", function () {
-            /* //do this only if your first select is dynamic
-             $("#cat").selectmenu(); // Initializes
-             $("#cat").selectmenu('refresh', true); */
-            $("#cat").on("change", function () {
-            //    alert("change");
-                //$("#subcat").load("http://fortunebitsolutions.com/olx/dataadmin/getsub.php?cat=" + $("#cat").val());<--This wont work.ajax doesnt allow cross domain requests
-
-                //get a response from this url from your server, and make an ajax request to your server to get it from there.
-                //assuming this is the response from the server.
-                var $options = options[parseInt(this.value) - 1]
-
-
-                $("#subcat").html($options).selectmenu().selectmenu('refresh', true);
-            });
-        });
-
-
-
-    </script>
-
-
-
+<body>
 <!-- start of id=inbox -->
 
-<div data-role="page" id="first" data-title="regHartaModalList" data-theme="a">
+<div data-role="page" id="regHartaModal" data-title="regHartaModalList" data-theme="a">
 
     <div data-role="header" data-position="fixed">
         <h1>Pendaftaran (KEW.PA-2)</h1>
     </div>
+
+
     <div data-role="content" data-theme="a">
-
-
             <img src="images/final-reg-hartamodal-step2.png" width="300" height="50" about="center">
             <div class="hr"></div>
 
@@ -69,23 +40,26 @@
             <br><h3 align="center">Kumpulan Aset: Harta Modal</h3>
         </div><br>
 
-        <div data-role="content">
+        <form>
+            <select id="asset-remote" data-variable="bar" name="asset">
+                <option value="">Pilih Kategori</option>
+                <option value="1">Peralatan & Kelengkapan Pejabat</option>
+                <option value="2">Kenderaan</option>
+                <option value="3">Loji / Jentera Berat</option>
+            </select>
+            <select id="series-remote" name="series">
+                <option value="">--</option>
+            </select>
+            <select id="model-remote"  name="model">
+                <option value="">--</option>
+            </select>
+            <select id="engine-remote" name="engine">
+                <option value="">--</option>
+            </select>
 
-                <div data-role="content">
-                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                        <label for="cat" class="select">Category:</label>
-                        <select name="cat" id="cat" data-mini="true">
-                            <option value="1">COMPUTER</option>
-                            <option value="2">MOBILE</option>
-                            <option value="3">LAND</option>
-                            <option value="5">JEWELLERY</option>
-                        </select>
-                    </div>
-                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
-                        <label for="subcat" class="select">Sub Category:</label>
-                        <select name="subcat" id="subcat" data-mini="true"></select>
-                    </div>
-                </div>
+            <button id="button-remote" type="submit">Button</button>
+
+        </form>
 
     </div>
 
@@ -97,6 +71,8 @@
         </div>
     </div>
 
-        </div>
 
+
+</div>
         <!-- end of id=inbox -->
+</body>

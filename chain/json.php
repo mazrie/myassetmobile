@@ -160,32 +160,7 @@ if (isset($_GET["series"]) && isset($_GET["model"])) {
 
 };
 
-if (isset($_GET["a"])) {
-    if ("a1" == $_GET["a"]) {
-        $response[""]     = "--";
-        $response["a1"] = "anything starting a1";
-        if ("b1" == $_GET["b"]) {
-            $response["a1b1"] = "a1b1";
-            $response["a1b1_a1b2"] = "a1b1 or a1b2";
-        }
-        if ("b2" == $_GET["b"]) {
-            $response["a1b1_a1b2"] = "a1b1 or a1b2";
-        }
-    };
-
-    if ("a2" == $_GET["a"]) {
-        $response[""] = "--";
-        if ("b2" == $_GET["b"]) {
-            $response["a2b2"] = "a2b2";
-        }
-        if ("b3" == $_GET["b"]) {
-            $response["a2b3"] = "a2b3";
-        }
-    };
-
-    if ("a3" == $_GET["a"]) {
-        $response[""] = "--";
-    };
-}
 
 print json_encode($response);
+
+?>

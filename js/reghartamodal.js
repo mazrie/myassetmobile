@@ -1,26 +1,53 @@
-$('#selectAssetCategory').live('pageshow', function(event) {
-    getSelectAssetCategory();
+$(document).live('pageinit', '#regHartaModal' ,function() {
+
+
+    /* For jquery.chained.remote.js */
+    // category
+    $("#series-remote").remoteChained({
+        parents: "#asset-remote",
+        url: "json.php?sleep=1",
+        loading: "--",
+        clear: true
+    });
+
+    // sub-category
+    $("#model-remote").remoteChained({
+        parents: "#series-remote",
+        url: "json.php?sleep=1",
+        loading: "--",
+        clear: true
+    });
+
+    // type
+    $("#engine-remote").remoteChained({
+        parents: "#series-remote, #model-remote",
+        url: "json.php?sleep=1",
+        loading: "--",
+        clear: true
+    });
+
+    /* Show button after each pulldown has a value. */
+    $("#engine-remote").bind("change", function (event) {
+        if ("" != $("option:selected", this).val() && "" != $("option:selected", $("#model-remote")).val()) {
+            $("#button-remote").fadeIn();
+        } else {
+            $("#button-remote").hide();
+        }
+    });
 });
 
 
-function getSelectAssetCategory() {
-    $.getJSON("services/gethartamodal.php",function(data){
-        var select = $('#selectAssetCategory');
-        if (select.prop) {
-            var options = select.prop('options');
-        }
-        else {
-            var options = select.attr('options');
-        }
-        $('option', select).remove();
-        $.each(data.items, function(key, value){
-            options[options.length] = new Option(value['acl_name'], value['acl_id']);
-        });
-    });
-}
-
-
 /*
+
+
+ $(document).live('pageinit', '#regHartaModal' ,function(){
+ $("#series").chained("#class");
+ $("#model").chained("#series");
+ $("#engine").chained("#series, #model");
+
+ });
+
+
 var messages;
 
 $('#selectAssetCategory').live('pageshow', function(event) {

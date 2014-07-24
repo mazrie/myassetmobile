@@ -35,17 +35,26 @@ if (isset($_GET["series"]) && isset($_GET["model"])) {
       $response["30-diesel"] = "3.0 diesel";
   }
 
-} else if (isset($_GET["mark"])) {
-    if ("bmw" == $_GET["mark"]) {
+}
+// harta modal > category
+else if (isset($_GET["asset"])) {
+    if ("1" == $_GET["asset"]) {
         $response[""] = "--";
-        $response["series-1"] = "1 series";
-        $response["series-3"] = "3 series";
-        $response["series-5"] = "5 series";
-        $response["series-6"] = "6 series";
-        $response["series-7"] = "7 series";
+        $response["series-1"] = "001 - MESIN PEJABAT";
+        $response["series-2"] = "002 - PERALATAN PEJABAT";
+        $response["series-3"] = "003 - PERALATAN RANGKAIAN";
+        $response["series-4"] = "004 - PDA/PALMTOP";
+        $response["series-5"] = "005 - PENCETAK (PRINTER)";
+        $response["series-6"] = "006 - PERALATAN STORAN";
+        $response["series-7"] = "007 - PEGIMBAS (SCANNER)";
+        $response["series-8"] = "008 - PERISIAN";
+        $response["series-9"] = "009 - PERANTI KOMPUTER";
+        $response["series-10"] = "010 - RAK PERALATAN ICT";
+
+
     };
 
-    if ("audi" == $_GET["mark"]) {
+    if ("2" == $_GET["asset"]) {
         $response[""] = "--";
         $response["a1"]  = "A1";
         $response["a3"]  = "A3";
@@ -59,7 +68,25 @@ if (isset($_GET["series"]) && isset($_GET["model"])) {
         $response["rs6"] = "RS6";
         $response["a8"]  = "A8";
     };
-} else if (isset($_GET["series"])) {
+
+        if ("3" == $_GET["asset"]) {
+            $response[""] = "--";
+            $response["a1"]  = "A1";
+            $response["a3"]  = "A3";
+            $response["s3"]  = "S3";
+            $response["a4"]  = "A4";
+            $response["s4"]  = "S4";
+            $response["a5"]  = "A5";
+            $response["s5"]  = "S5";
+            $response["a6"]  = "A6";
+            $response["s6"]  = "S6";
+            $response["rs6"] = "RS6";
+            $response["a8"]  = "A8";
+        };
+
+}
+// harta modal > category > sub
+else if (isset($_GET["series"])) {
     if ("series-1" == $_GET["series"]) {
         $response[""] = "--";
         $response["3-doors"] = "3 doors";
@@ -160,32 +187,7 @@ if (isset($_GET["series"]) && isset($_GET["model"])) {
 
 };
 
-if (isset($_GET["a"])) {
-    if ("a1" == $_GET["a"]) {
-        $response[""]     = "--";
-        $response["a1"] = "anything starting a1";
-        if ("b1" == $_GET["b"]) {
-            $response["a1b1"] = "a1b1";
-            $response["a1b1_a1b2"] = "a1b1 or a1b2";
-        }
-        if ("b2" == $_GET["b"]) {
-            $response["a1b1_a1b2"] = "a1b1 or a1b2";
-        }
-    };
-
-    if ("a2" == $_GET["a"]) {
-        $response[""] = "--";
-        if ("b2" == $_GET["b"]) {
-            $response["a2b2"] = "a2b2";
-        }
-        if ("b3" == $_GET["b"]) {
-            $response["a2b3"] = "a2b3";
-        }
-    };
-
-    if ("a3" == $_GET["a"]) {
-        $response[""] = "--";
-    };
-}
 
 print json_encode($response);
+
+?>

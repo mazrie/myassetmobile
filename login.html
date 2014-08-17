@@ -5,10 +5,6 @@
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.min.css" type="text/css" />
 	<link rel="stylesheet" href="css/jquery.mobile.theme-1.3.2.css" type="text/css" />
 	<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" type="text/css" />      
-	<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" />      
-
-	<!-- END OF head declaration -->
-
 
 
    <!-- START OF script declarations -->     
@@ -18,66 +14,45 @@
 
 				
 	<!-- services -->
-	<script src="js/employeelist.js"></script>
-	<script src="js/employeedetails.js"></script>
-	<script src="js/messagelist.js"></script>
-	<script src="js/messagedetails.js"></script>
-	<script src="js/assetclasslist.js"></script>
-	<script src="js/assetcategorylist.js"></script>
-	<script src="js/assetclassselected.js"></script>
-	<script src="js/assetcategoryselected.js"></script>
-	<script src="js/assettypelist.js"></script>
 	<script src="js/loginvalidate.js"></script>
 
-	<!-- iscrollview  -->
-	<script src="js/iscroll.js" type="text/javascript"></script>
-	<script src="js/jquery.mobile.iscrollview.js" type="text/javascript"></script>
-
-	<!-- mobile datebox  -->
-	<script src="js/jquery-ui.js" type="text/javascript"></script>
-	
-	<!-- mobile datebox  -->
-	<script src="js/jquery.mobile.simpledialog.js" type="text/javascript"></script>
-	
-	<!-- gmap3 
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<script type="text/javascript" src="js/gmap3.min.js"></script>
-	 gmap3 -->
 
 	<!-- theme  -->
 	<link rel="stylesheet" href="css/myassetmobile_v2.1.css" />
-	<link rel="stylesheet" href="css/overrides.css" />
-	<link rel="stylesheet" type="text/css" href="css/login.css" />
-	
+	<link rel="stylesheet" href="css/overides.css" />
+
 	<!-- END OF script declarations -->  
 	
-	<!-- start of id=loginValidate -->
     </head>
+<!-- END OF head declaration -->
 
-	
-<div data-role="page" id="loginValidate" data-title="loginValidate" data-theme="a">
-	  <div data-role="header" data-position="fixed">
-  </div>
-<div class="container" data-role="content" >
-	<section id="content">
-		<form id="checkUser" data-ajax="false">
-	  		<img class="logo" src="images/logo-mam-1.png" alt="" title="" width="220" height="85" />
-			<div>
-					<input type="text" placeholder="Username" required="" id="username" />
-				</div>
-			<div>
-				<input type="password" placeholder="Kata laluan" required="" id="password" />
-			</div>
-			<div><a href="#">Lupa kata laluan?</a> <input type="submit" id="loginSubmit" value="Log in" />
-			</div>
+<!-- start of id=loginValidate -->
 
-		</form><!-- form -->
-		<div class="button">
-			<a href="#">Bantuan Sistem</a>
-		</div><!-- button -->
-	</section><!-- content -->
-</div><!-- container -->
+<body>
+
+<div data-role="page" id="loginValidate" data-title="loginValidate" style="background: #cccccc url(images/bg-mam-2-1920x1200.png) no-repeat center; background-size:100% 100%;">
+
+    <br><br><br><br><br><br>
+    <div data-role="content">
+        <form id="checkUser" class="ui-body ui-body-a ui-corner-all" data-ajax="false">
+
+                <img class="logo" src="images/logo-mam-1.png" alt="" title="" width="220" height="85" />
+                <div data-role="fieldcontain">
+                    <label for="username">Enter your username:</label>
+                    <input type="text" value="" name="username" id="username"/>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="password">Enter your password:</label>
+                    <input type="password" value="" name="password" id="password"/>
+                </div>
+                <input type="button" name="submit" id="loginSubmit" value="Submit">
+            </form><!-- form -->
+            <div class="button">
+                <a href="#">Bantuan Sistem</a>
+            </div><!-- button -->
+    </div><!-- container -->
       
 </div>
 
 <!-- end of id=loginValidate -->
+</body>

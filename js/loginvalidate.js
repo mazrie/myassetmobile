@@ -4,11 +4,15 @@
             // Send data to server through the ajax call
             // action is functionality we want to call and outputJSON is our data
 
-            console.log($('#checkUser').serialize());
+            console.log('ade tak? ' + $('#checkUser').serialize());
             $.ajax({
-                url: 'services/getloginvalidate_ori.php',
-                data: $('#checkUser').serialize(),
+                url: 'services/getloginvalidate.php',
+                data: "action=login&" + $('#checkUser').serialize(),
+                //data: {action : 'login', formData : $('#checkUser').serialize()},
                 type: 'POST',
+                async: 'true',
+                dataType: 'json',
+
                 beforeSend: function () {
                     // This callback function will trigger before data is sent
                     $.mobile.showPageLoadingMsg(true); // This will show ajax spinner
@@ -18,11 +22,13 @@
                     $.mobile.hidePageLoadingMsg(); // This will hide ajax spinner
                 },
                 success: function (result) {
-                    if (result.login == true) {
-                        alert("betul " + result.username);
-                        //$.mobile.changePage("home.php");
+                    //obj = JSON.parse(result);
+                    console.log(result)
+                    if (result.status == true) {
+                        //alert("betul " + result.status);
+                        $.mobile.changePage("main.html");
                     } else {
-                        alert("wrong credentials " + result.username);
+                        alert("email dan/atau password dimasukkan tidak sah " + result.status);
                     }
 
                 },
@@ -32,7 +38,7 @@
                 }
             });
         } else {
-            alert('Please fill all necessary fields');
+            alert('Sila Masukkan email dan/atau katalaluan');
         }
     return false; // cancel original event to prevent form submitting
 });

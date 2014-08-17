@@ -1,19 +1,16 @@
 <?php
 
 // Prevent caching.
-//header('Cache-Control: no-cache, must-revalidate');
+header('Cache-Control: no-cache, must-revalidate');
 
 include 'config.php';
 
-
-			
 // Get username
-//$username = $_POST['username'];
-$username = 'mack';
-
+$username = $_POST['username'];
 // Get password
-//$password = md5($_POST['password']); 
-$password = 'mack';
+$password = $_POST['password'];
+
+//echo 'lahabau:', $username, '   ', $password;
 
 // run the mother load
 $sql = "
@@ -42,15 +39,18 @@ foreach($row as $rows){
   print $rows->id;
 }
 
-	//
-	echo 'user :', $sql, '<br>';
-	echo 'user :', $username, '<br>';
-	echo 'password :', $password, '<br>';
-	echo 'row :' . $rows, '<br>';
-	echo '{"items":'. json_encode($category) .'}'; 
-} catch(PDOException $e) {
-	echo '{"error":{"text":'. $e->getMessage() .'}}'; 
-}
+if($rows != NULL){
+	$output = array('status' => true, 'message' => 'Login');
+	}
+	else
+		{
+		$output = array('status' => false, 'message' => 'No Login', 'username' => $username, 'password' => $password);
+		}
+		echo json_encode($output); 
+	}
+		catch(PDOException $e) {
+			echo '{"error":{"text":'. $e->getMessage() .'}}'; 
+			}
 
 
 

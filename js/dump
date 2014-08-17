@@ -1,0 +1,9 @@
+ success: function (result) {
+                    obj = JSON.parse(result);
+                    console.log(result)
+                    if (obj.status == true) {
+                        alert("betul " + obj.status);
+                        //$.mobile.changePage("home.php");
+                    } else {
+                        alert("email dan/atau password dimasukkan tidak sah " + obj.status);
+                    }

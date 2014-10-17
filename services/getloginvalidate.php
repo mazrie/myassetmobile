@@ -6,18 +6,27 @@ header('Cache-Control: no-cache, must-revalidate');
 include 'config.php';
 
 // Get username
-$username = $_POST['username'];
+//$username = $_POST['username'];
 // Get password
-$password = $_POST['password'];
+//$password = $_POST['password'];
 
 //echo 'lahabau:', $username, '   ', $password;
+
+$username = "mack@mack.com";
+$password = "mack";
 
 // run the mother load
 $sql = "
 			SELECT 
-			user_login.ulg_un, user_login.ulg_un, user_login.ulg_status
+			user_login.ulg_status, user_login.ulg_lastlogin, asset_license.al_company, user_status.ust_role
 			FROM 
-			user_login WHERE user_login.ulg_un=\"$username\" AND user_login.ulg_pw=\"$password\" AND user_login.ulg_status=1";
+			user_login, user_info, asset_license, user_status
+			WHERE
+			user_info.uin_ul = user_login.ulg_id
+			AND user_login.ust_id = user_status.ust_id
+			AND user_info.uin_company = asset_license.al_id
+			AND user_login.ulg_un=\"$username\"
+			AND user_login.ulg_pw=\"$password\" AND user_login.ulg_status=1";
 
 
 try {
@@ -28,9 +37,11 @@ try {
 	$stmt->execute();
 	
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
+
 	
-	
-	$category = $stmt->fetchAll(PDO::FETCH_OBJ);
+	$getdata = $stmt->fetchAll(PDO::FETCH_OBJ);
+	$actualdata = var_dump($getdata);
+	echo $actualdata[ulg_session];
 	$dbh = null;
 	
 	// the if's
@@ -40,11 +51,27 @@ foreach($row as $rows){
 }
 
 if($rows != NULL){
-	$output = array('status' => true, 'message' => 'Login');
+	$output = array(
+    		'status' => true,
+    		'message' => 'Login',
+    		'username' => $username,
+    		'active' => $getdata['ulg_status'],
+    		'lastlogin' => $username,
+    		'company' => $username,
+    		'role' => $username
+    		);
 	}
 	else
 		{
-		$output = array('status' => false, 'message' => 'No Login', 'username' => $username, 'password' => $password);
+		$output = array(
+		'status' => false,
+		'message' => 'No Login',
+		'username' => $username,
+		'active' => $password,
+		'lastlogin' => $username,
+		'company' => $username,
+		'role' => $username
+		);
 		}
 		echo json_encode($output); 
 	}

@@ -26,19 +26,42 @@
                     console.log(result)
                     if (result.status == true) {
                         //alert("betul " + result.status);
-                        $.mobile.changePage("main.html");
+                        //alertify.alert("Betul! pandainyee..");
+
+                        //add session username
+                        var myName = document.getElementById("username");
+
+                        try {
+                            localStorage.setItem("username", myName.value);
+                            myName.value = "";
+                        }
+                        catch (e) {
+                            if (e == QUOTA_EXCEEDED_ERR) {
+                                console.log("Error: Local Storage limit exceeds.");
+                            }
+                            else {
+                                console.log("Error: Saving to local storage.");
+                            }
+                        }
+
+
+
+                        //$.mobile.changePage("main.html");
+                        $.mobile.changePage("main.html", { reloadPage: true }, { transition: "slide" });
                     } else {
-                        alert("email dan/atau password dimasukkan tidak sah " + result.status);
+                        alertify.alert("Email dan/atau Password yang dimasukkan tidak sah");
+
+                        //alert("email dan/atau password dimasukkan tidak sah " + result.status);
                     }
 
                 },
                 error: function (request, error) {
                     // This callback function will trigger on unsuccessful action
-                    alert("An error occurred: " + status + "nError: " + error);
+                    alertify.alert("Sila periksa talian internet anda");
                 }
             });
         } else {
-            alert('Sila Masukkan email dan/atau katalaluan');
+            alertify.alert("Sila Masukkan email dan/atau kata laluan")
         }
     return false; // cancel original event to prevent form submitting
 });

@@ -7,12 +7,20 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>PhoneGap Example</name>
+    <name>MyAssetMobile Demo</name>
 
     <description>
-        An example for phonegap build docs. 
+        My Asset Mobile Demo - Verison 2.4.
     </description>
 
     <author href="http://www.myassetmobile.com" email="mazrie@gmail.com">Mazrie Mahat</author>
+
+    <platform name="android">
+        <icon src="images/icon.png" density="ldpi" />
+        <icon src="images/icon.png" density="mdpi" />
+        <icon src="images/icon.png" density="hdpi" />
+        <icon src="images/icon.png" density="xhdpi" />
+    </platform>
+
 
 </widget>

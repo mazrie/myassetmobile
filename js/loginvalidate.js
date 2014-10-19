@@ -23,10 +23,10 @@
                 },
                 success: function (result) {
                     //obj = JSON.parse(result);
-                    console.log(result)
+                    console.log('sini ada?', result)
                     if (result.status == true) {
-                        //alert("betul " + result.status);
-                        //alertify.alert("Betul! pandainyee..");
+                        alert("betul " + result.status);
+                        alertify.alert("Betul! pandainyee..");
 
                         //add session username
                         var myName = document.getElementById("username");
@@ -44,8 +44,6 @@
                             }
                         }
 
-
-
                         //$.mobile.changePage("main.html");
                         $.mobile.changePage("main.html", { reloadPage: true }, { transition: "slide" });
                     } else {
@@ -57,7 +55,8 @@
                 },
                 error: function (request, error) {
                     // This callback function will trigger on unsuccessful action
-                    alertify.alert("Sila periksa talian internet anda");
+                    $.mobile.changePage("main.html", { reloadPage: true }, { transition: "slide" });
+                    //alertify.alert("Sila periksa talian internet anda");
                 }
             });
         } else {

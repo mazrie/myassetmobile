@@ -3,21 +3,29 @@ include 'config.php';
 
 $sql = "
 		SELECT 
-		asset_class.acl_id, asset_class.acl_name		
+		lookup_list.lkl_id, lookup_list.lkl_name
+
 		FROM 
-		asset_class WHERE asset_class.acl_id=:id";
+		lookup_list
+
+		WHERE
+		lookup_list.lkt_id=:unit
+		";
 		
+	
+
 try {
 	$dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);	
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$stmt = $dbh->prepare($sql);  
-	$stmt->bindParam("id", $_GET[id]);
+	$stmt = $dbh->prepare($sql);
+	$stmt->bindParam("unit", $_GET[unit]);
 	$stmt->execute();
-	$assetselected = $stmt->fetchObject();  
+	$message = $stmt->fetchAll();
 	$dbh = null;
-	echo '{"item":'. json_encode($assetselected) .'}'; 
+	echo '{"items":'. json_encode($message) .'}';
 } catch(PDOException $e) {
 	echo '{"error":{"text":'. $e->getMessage() .'}}'; 
 }
+
 
 ?>

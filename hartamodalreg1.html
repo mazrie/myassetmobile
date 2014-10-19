@@ -1,0 +1,107 @@
+<!-- START OF head declarations -->
+<head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+
+    <!-- theme  -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css">
+    <link rel="stylesheet" href="css/myassetmobile_v3.min.css" />
+    <link rel="stylesheet" href="css/overides.css" />
+
+    <!-- alertify -->
+    <script src="js/alertify.min.js"></script>
+    <link rel="stylesheet" href="css/alertify.core.css" type="text/css" />
+    <link rel="stylesheet" href="css/alertify.default.css" type="text/css" />
+
+
+    <!-- services -->
+    <script src="js/hartamodalreg1.js"></script>
+
+    <!-- jquery chained -->
+    <script src="js/jquery.chained.remote.min.js"></script>
+
+    <!-- iscrollview  -->
+    <script src="js/iscroll.js" type="text/javascript"></script>
+    <script src="js/jquery.mobile.iscrollview.js" type="text/javascript"></script>
+
+
+</head>
+<!-- END OF HEAD declarations -->
+
+<body>
+<!-- start of id=inbox -->
+
+<div data-role="page" id="regHartaModal" data-title="regHartaModalList" data-theme="a">
+
+    <div data-role="header" data-position="fixed">
+        <h1>Pendaftaran (KEW.PA-2)</h1>
+    </div>
+
+
+    <div data-role="content" data-theme="a">
+            <img src="images/final-reg-hartamodal-step2.png" width="350" height="50" about="center">
+            <div class="hr"></div>
+
+        <div class="element">
+            <br><h3 align="center">Kumpulan Aset: Harta Modal</h3>
+        </div><br>
+
+        <form id="hartamodalreg1" data-ajax="false" method="get" rel="external" action="hartamodalreg2.html">
+            <select id="cat" name="cat">
+                <option value="" selected>Pilih Kategori</option>
+                <option value="13">Kenderaan</option>
+                <option value="14">Loji / Jentera Berat</option>
+                <option value="2">Peralatan & Kelengkapan Pejabat</option>
+
+            </select>
+            <select id="sub" name="sub">
+                <option value="">--</option>
+            </select>
+            <select id="type" name="type">
+                <option value="">--</option>
+            </select>
+
+            <button id="btn_submit" type="submit" data-icon="arrow-r" data-theme="b">SETERUSNYA</button>
+
+        </form>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed" data-theme="a">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" data-role="button" data-icon="arrow-l" data-theme="b" data-rel="back">Back </a>
+            <a href="main.html" rel="external" data-role="button" data-icon="home" data-theme="b"> Menu </a>
+            <a href="logout.html"  rel="external" data-role="button" data-icon="grid" data-theme="b"> Logout</a>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#btn_submit').click(function () {
+                if($('#sub').val().length==0)
+                {
+                    //$('#Msg').text('Please enter your name!');
+                    alertify.alert("Sila Pilih Sub Kategori..");
+
+                    return false;
+                }
+
+                if($('#type').val().length==0)
+                {
+                    //$('#Msg').text('Please enter your name!');
+                    alertify.alert("Sila Pilih Jenis..");
+
+                    return false;
+                }
+                else
+                {
+                    $('#Msg').text('');
+                }
+            });
+        });
+    </script>
+
+</div>
+        <!-- end of id=inbox -->
+</body>

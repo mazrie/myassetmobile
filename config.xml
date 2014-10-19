@@ -22,5 +22,6 @@
         <icon src="images/icon.png" density="xhdpi" />
     </platform>
 
+    <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
 
 </widget>

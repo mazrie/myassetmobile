@@ -6,14 +6,12 @@ header('Cache-Control: no-cache, must-revalidate');
 include 'config.php';
 
 // Get username
-//$username = $_POST['username'];
+$username = $_POST['username'];
 // Get password
-//$password = $_POST['password'];
+$password = $_POST['password'];
 
 //echo 'lahabau:', $username, '   ', $password;
 
-$username = "mack@mack.com";
-$password = "mack";
 
 // run the mother load
 $sql = "
@@ -38,7 +36,7 @@ try {
 	
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-	
+
 	$getdata = $stmt->fetchAll(PDO::FETCH_OBJ);
 	$actualdata = var_dump($getdata);
 	echo $actualdata[ulg_session];
